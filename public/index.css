@@ -1,0 +1,20 @@
+.container{
+  width: 80%;
+  height: 600px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 40px;
+  padding: 50px;
+  background-color: #00BCD4;
+}
+#stats{
+  width: 70%;
+  height: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #80B1CA;
+  font-size: 200pt;
+  text-align: center;
+}

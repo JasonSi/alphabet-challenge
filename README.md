@@ -1,4 +1,4 @@
-# alphabetTyping
+# Alphabet Challenge
 ### Introduce
 Type letters after the alphabet as swift as you can.
 
@@ -14,4 +14,6 @@ Do not change the structure of folders if you want launch it safely.
 
 ### 使用教程
 点击 “Download ZIP” 下载后解压，文件夹结构不要改动，直接打开 **index.html** 运行就可以。
-最好使用Webkit内核浏览器，例如Chrome
+
+
+仅在Chrome下测试过，请尽量使用Webkit内核浏览器
