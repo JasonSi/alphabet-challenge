@@ -1,5 +1,5 @@
 var stats = document.getElementById("stats")
-stats.innerHTML = 'A' //其实应该是欢迎语啥的
+stats.innerHTML = 'A'
 var flag = 65
 document.onkeydown = function(e){
   //屏蔽浏览器快捷键
@@ -27,7 +27,14 @@ document.onkeydown = function(e){
       }
       else if(flag == 91){
         endTime = Date.now()
-        stats.innerHTML = (endTime - startTime)/1000.0
+        score = (endTime - startTime)/1000.0
+        if(score<10){
+          //10秒之外不显示时间避免几万秒溢出容器，并给予嘲讽
+          stats.innerHTML = score
+        }
+        else {
+          stats.innerHTML = "Slow"
+        }
       }
 
     }
