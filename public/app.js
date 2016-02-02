@@ -15,6 +15,14 @@ function createCanvas(score){
   ctx.fillText(score,50,250)
 }
 
+function playAudio(status){
+  audio = document.getElementById(status.toLowerCase())
+  // audio.src="public/"+ status.toLowerCase() +'.wav' //效率太低
+  audio.currentTime = 0.2
+  audio.loop = false
+  audio.play()
+}
+
 document.onkeydown = function(e){
   //屏蔽浏览器快捷键
   e.preventDefault()
@@ -31,6 +39,8 @@ document.onkeydown = function(e){
     if(e.keyCode == flag){
       //输入正确的情况
       flag++
+      //输入正确 清除声
+      playAudio('CLEAR')
 
       if (e.keyCode==65) {
         startTime = Date.now()
@@ -47,20 +57,24 @@ document.onkeydown = function(e){
           //成绩用Canvas绘制，尽力避免通过修改页面来作弊
           //非要作弊可以直接改代码我也没什么办法
           createCanvas(score)
+          playAudio('WIN')
         }
         else {
           stats.innerHTML = "Slow"
+          playAudio('LOSE')
         }
       }
 
     }
     else{
       //警告声 输入错误
+      playAudio('WRONG')
     }
 
   }
 
   else{
     //非字母、空格按键 警告声
+    playAudio('ERROR')
   }
 }
