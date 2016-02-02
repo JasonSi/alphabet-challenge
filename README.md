@@ -7,6 +7,8 @@ Click the button named "Download ZIP" to download this program(or game? Whatever
 Unzip this file and run **index.html** to start.
 Do not change the structure of folders if you want launch it safely.
 
+
+Finish it within 10 seconds!
 ---
 
 ### 说明
@@ -16,4 +18,4 @@ Do not change the structure of folders if you want launch it safely.
 点击 “Download ZIP” 下载后解压，文件夹结构不要改动，直接打开 **index.html** 运行就可以。
 
 
-仅在Chrome下测试过，请尽量使用Webkit内核浏览器
+十秒你行吗?

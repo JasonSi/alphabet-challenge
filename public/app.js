@@ -41,7 +41,7 @@ document.onkeydown = function(e){
       //输入正确的情况
       flag++
       //输入正确 清除声
-      playAudio('CLEAR',0.25)
+      playAudio('CLEAR',0.28)
 
       if (e.keyCode==65) {
         gameStart = Date.now()
@@ -57,7 +57,7 @@ document.onkeydown = function(e){
           //10秒之外不显示时间避免几万秒溢出容器，并给予嘲讽
           //成绩用Canvas绘制，尽力避免通过修改页面来作弊
           //非要作弊可以直接改代码我也没什么办法
-          createCanvas(score)
+          createCanvas(score.toFixed(3)) //确保图片在中间
           //十秒内完成，胜利声
           playAudio('WIN')
         }
@@ -79,7 +79,7 @@ document.onkeydown = function(e){
   else{
     //非字母、空格按键 警告声
     if (e.keyCode!=32){
-      playAudio('WRONG',0.1)
+      playAudio('WRONG',0.2)
       // playAudio('ERROR',0.1)
     }
   }
