@@ -1,4 +1,5 @@
 # Alphabet Challenge
+
 ### Introduce
 Type letters after the alphabet as swift as you can.
 
@@ -6,6 +7,13 @@ Type letters after the alphabet as swift as you can.
 Click the button named "Download ZIP" to download this program(or game? Whatever...).
 Unzip this file and run **index.html** to start.
 Do not change the structure of folders if you want launch it safely.
+
+### Tips
+You can change the themes in the game by clicking the label **Themes** in the top right.
+
+
+Finish it within 10 seconds!
+
 
 ---
 
@@ -15,5 +23,8 @@ Do not change the structure of folders if you want launch it safely.
 ### 使用教程
 点击 “Download ZIP” 下载后解压，文件夹结构不要改动，直接打开 **index.html** 运行就可以。
 
+### 小提示
+你可以点击右上角的 **Themes** 标签,来更换主题。
 
-仅在Chrome下测试过，请尽量使用Webkit内核浏览器
+
+十秒你行吗?

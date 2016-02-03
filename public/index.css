@@ -2,11 +2,15 @@ html{
   font-family: Verdana ,sans-serif;
 }
 body{
-  background-color: #ACBA85;
+  /*background-color: #ACBA85;*/
   text-align: center;
-  color: #4E8858;
+  /*color: #4E8858;*/
 }
-.container{
+ul{
+  list-style: none;
+
+}
+#container{
   width: 80%;
   height: 500px;
   left: 0;
@@ -14,16 +18,23 @@ body{
   margin: auto;
   margin-top: 40px;
   padding: 50px;
-  /*background-color: #00BCD4;*/
 }
+
 #stats{
   width: 70%;
   height: 80%;
   left: 0;
   right: 0;
   margin: auto;
-  /*background-color: #80B1CA;*/
-  color: #436A3E;
+  /*color: #436A3E;*/
   font-size: 200pt;
   text-align: center;
+}
+
+#themes{
+  display: none;
+}
+#options{
+  position: absolute;
+  right: 10%;
 }
