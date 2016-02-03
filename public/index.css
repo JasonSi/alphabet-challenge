@@ -1,15 +1,11 @@
 html{
   font-family: Verdana ,sans-serif;
 }
-body{
-  /*background-color: #ACBA85;*/
-  text-align: center;
-  /*color: #4E8858;*/
-}
-ul{
-  list-style: none;
 
+body{
+  text-align: center;
 }
+
 #container{
   width: 80%;
   height: 500px;
@@ -26,15 +22,15 @@ ul{
   left: 0;
   right: 0;
   margin: auto;
-  /*color: #436A3E;*/
   font-size: 200pt;
   text-align: center;
 }
 
 #themes{
-  display: none;
-}
-#options{
   position: absolute;
-  right: 10%;
+  right: 8%;
+  cursor:pointer;
+  padding: 2px;
+  border: solid 1px;
+  border-radius: 2px;
 }

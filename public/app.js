@@ -28,6 +28,7 @@ function createCanvas(score,fontColor){
 function playAudio(status){
   //传入起始播放时间，默认为0
   startTime = arguments[1] ? arguments[1] : 0
+  //传入播放音量，默认0.5，以应对音量过大或过小
   volume    = arguments[2] ? arguments[2] : 0.5
   audio = document.getElementById(status.toLowerCase())
   audio.currentTime = startTime
@@ -88,7 +89,7 @@ document.onkeydown = function(e){
         }
         else {
           // 十秒外完成，失败声
-          playAudio('LOSE',0.2)
+          playAudio('LOSE',0.1,0.25)
           stats.innerHTML = "LOSE"
         }
       }
@@ -105,7 +106,6 @@ document.onkeydown = function(e){
     //非字母、空格按键 警告声
     if (e.keyCode!=32){
       playAudio('WRONG',0.29)
-      // playAudio('ERROR',0.1)
     }
   }
 }
