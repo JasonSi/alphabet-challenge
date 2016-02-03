@@ -2,7 +2,17 @@ var stats = document.getElementById("stats")
 stats.innerHTML = 'A'
 var flag = 65
 
-function createCanvas(score){
+//预置配色方案
+var themes = [
+  {baseColor: '#ACBA85',textColor: '#4E8858',statsColor: '#436A3E'},
+  {baseColor: '#E98D70',textColor: '#AA4A30',statsColor: '#dd6821'},
+  {baseColor: '#B3E5FC',textColor: '#29B6F6',statsColor: '#0277BD'}
+]
+var index = 0
+//初始化一个配色方案
+changeTheme()
+
+function createCanvas(score,fontColor){
   canvas = document.createElement("canvas")
   canvas.width="600"
   canvas.height="400"
@@ -10,8 +20,8 @@ function createCanvas(score){
   stats.innerHTML=''
   stats.appendChild(canvas)
   ctx = canvas.getContext('2d')
-  ctx.fillStyle = "#436A3E"
-  ctx.font="150pt sans-serif"
+  ctx.fillStyle = fontColor
+  ctx.font="150pt Verdana sans-serif"
   ctx.fillText(score,50,250)
 }
 
@@ -22,6 +32,20 @@ function playAudio(status){
   audio.currentTime = startTime
   audio.loop = false
   audio.play()
+}
+
+function changeTheme(){
+  // index = arguments[1] ? arguments[1] : 2
+  body = document.getElementsByTagName("body")[0]
+  body.style.backgroundColor = themes[index].baseColor
+  body.style.color  = themes[index].textColor
+  stats.style.color = themes[index].statsColor
+  if(index==themes.length-1){
+    index = 0
+  }
+  else{
+    index += 1
+  }
 }
 
 document.onkeydown = function(e){
@@ -54,12 +78,12 @@ document.onkeydown = function(e){
         gameOver = Date.now()
         score = (gameOver - gameStart)/1000.0
         if(score<10){
+          //十秒内完成，胜利声
+          playAudio('WIN')
           //10秒之外不显示时间避免几万秒溢出容器，并给予嘲讽
           //成绩用Canvas绘制，尽力避免通过修改页面来作弊
           //非要作弊可以直接改代码我也没什么办法
-          createCanvas(score.toFixed(3)) //确保图片在中间
-          //十秒内完成，胜利声
-          playAudio('WIN')
+          createCanvas(score.toFixed(3),stats.style.color) //固定小数位确保图片在中间
         }
         else {
           stats.innerHTML = "LOSE"
