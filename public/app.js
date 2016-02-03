@@ -14,10 +14,10 @@ changeTheme()
 
 function createCanvas(score,fontColor){
   canvas = document.createElement("canvas")
-  canvas.width="600"
-  canvas.height="400"
+  canvas.width  = "600"
+  canvas.height = "400"
   canvas.innerHTML = ' '//不知为何一定要有这个不然没有关闭标签
-  stats.innerHTML=''
+  stats.innerHTML  =''
   stats.appendChild(canvas)
   ctx = canvas.getContext('2d')
   ctx.fillStyle = fontColor
@@ -28,14 +28,15 @@ function createCanvas(score,fontColor){
 function playAudio(status){
   //传入起始播放时间，默认为0
   startTime = arguments[1] ? arguments[1] : 0
+  volume    = arguments[2] ? arguments[2] : 0.5
   audio = document.getElementById(status.toLowerCase())
   audio.currentTime = startTime
-  audio.loop = false
+  audio.loop    = false
+  audio.volume  = volume
   audio.play()
 }
 
 function changeTheme(){
-  // index = arguments[1] ? arguments[1] : 2
   body = document.getElementsByTagName("body")[0]
   body.style.backgroundColor = themes[index].baseColor
   body.style.color  = themes[index].textColor
@@ -79,23 +80,23 @@ document.onkeydown = function(e){
         score = (gameOver - gameStart)/1000.0
         if(score<10){
           //十秒内完成，胜利声
-          playAudio('WIN')
+          playAudio('WIN',0,1)
           //10秒之外不显示时间避免几万秒溢出容器，并给予嘲讽
           //成绩用Canvas绘制，尽力避免通过修改页面来作弊
           //非要作弊可以直接改代码我也没什么办法
           createCanvas(score.toFixed(3),stats.style.color) //固定小数位确保图片在中间
         }
         else {
-          stats.innerHTML = "LOSE"
           // 十秒外完成，失败声
-          playAudio('LOSE')
+          playAudio('LOSE',0.2)
+          stats.innerHTML = "LOSE"
         }
       }
 
     }
     else{
       //警告声 输入错误
-      playAudio('WRONG',0.2)
+      playAudio('WRONG',0.29)
     }
 
   }
@@ -103,7 +104,7 @@ document.onkeydown = function(e){
   else{
     //非字母、空格按键 警告声
     if (e.keyCode!=32){
-      playAudio('WRONG',0.2)
+      playAudio('WRONG',0.29)
       // playAudio('ERROR',0.1)
     }
   }

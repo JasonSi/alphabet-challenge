@@ -2,13 +2,13 @@ html{
   font-family: Verdana ,sans-serif;
 }
 body{
-  background-color: #ACBA85;
+  /*background-color: #ACBA85;*/
   text-align: center;
-  color: #4E8858;
+  /*color: #4E8858;*/
 }
 ul{
   list-style: none;
-  
+
 }
 #container{
   width: 80%;
@@ -26,7 +26,7 @@ ul{
   left: 0;
   right: 0;
   margin: auto;
-  color: #436A3E;
+  /*color: #436A3E;*/
   font-size: 200pt;
   text-align: center;
 }
