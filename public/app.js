@@ -62,7 +62,6 @@ document.onkeydown = function(e){
 
   if(e.keyCode<=90 && e.keyCode>= 65){
     //按键为字母
-    keyInput = String.fromCharCode(e.keyCode)
     if(e.keyCode == flag){
       //输入正确的情况
       flag++
