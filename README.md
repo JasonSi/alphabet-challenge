@@ -1,4 +1,4 @@
-# Alphabet Challenge
+﻿# Alphabet Challenge
 
 ### Introduce
 Type letters after the alphabet as swift as you can.
@@ -12,7 +12,7 @@ Do not change the structure of folders if you want launch it safely.
 You can change the themes in the game by clicking the label **Themes** in the top right.
 
 
-Finish it within 10 seconds!
+Finish it within 10 seconds! 
 
 
 ---
