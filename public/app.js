@@ -4,8 +4,8 @@ var flag = 65
 
 //预置配色方案
 var themes = [
+  {baseColor: '#2B2B2B',textColor: '#a7a7a7',statsColor: '#E74146'},
   {baseColor: '#ACBA85',textColor: '#4E8858',statsColor: '#436A3E'},
-  {baseColor: '#E98D70',textColor: '#AA4A30',statsColor: '#dd6821'},
   {baseColor: '#B3E5FC',textColor: '#29B6F6',statsColor: '#0277BD'}
 ]
 var index = 0
